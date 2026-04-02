@@ -89,7 +89,7 @@ export default function Header({ categories = [], subCategories = [] }: HeaderPr
                 </li>
               </ul>
             </li>
-            <li><Link href="#" className={isActive("/services")}>Our Services</Link></li>
+            <li><Link href="/services" className={isActive("/services")}>Our Services</Link></li>
             <li><Link href="#" className={isActive("/rebates")}>Rebates & Incentives</Link></li>
             <li><Link href="/blog" className={isActive("/blog")}>Blogs</Link></li>
             <li><Link href="/contact" className={isActive("/contact")}>Contact Us</Link></li>
