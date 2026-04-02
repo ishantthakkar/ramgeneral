@@ -1,0 +1,24 @@
+/* app/globals.css */
+
+/* You can add custom global styles here if needed. 
+   Most styles are provided by app/assets/css/main.css and vendor files. */
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Safety override for AOS: Ensure content is visible even if script hasn't initialized */
+[data-aos] {
+  opacity: 1 !important;
+  transform: none !important;
+  visibility: visible !important;
+}
+
+/* If you want the animations to work, you can remove the !important later, 
+   but this will confirm the content is actually there. */
