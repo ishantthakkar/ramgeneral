@@ -16,7 +16,7 @@ export default function Home() {
                   Leading LED Solutions & Professional Lighting Fitting Services
                 </h3>
                 <p data-aos="fade-up">
-                  At RAM General Supply, we specialize in high-performance LED technology and expert installation. 
+                  At RAM General Supply, we specialize in high-performance LED technology and expert installation.
                   Whether it's industrial, commercial, or residential, we bring precision and brilliance to every corner.
                 </p>
                 <Link data-aos="fade-up" data-aos-delay="200" href="/collections/led-flat-panel-light" className="btn-get-started">
@@ -30,8 +30,8 @@ export default function Home() {
         <div id="hero-carousel" className="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
           <div className="carousel-item active" style={{ backgroundImage: "url(https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=1920&q=80)" }}></div>
           <div className="carousel-item" style={{ backgroundImage: "url(https://images.unsplash.com/photo-1553095066-5014bc7b7f2d?auto=format&fit=crop&w=1920&q=80)" }}></div>
-          <div className="carousel-item" style={{ backgroundImage: "url(https://images.unsplash.com/photo-1565814329452-e1dee7185ee8?auto=format&fit=crop&w=1920&q=80)" }}></div>
-          
+          <div className="carousel-item" style={{ backgroundImage: "url(/assets/img/ram-bg-three.jpg)" }}></div>
+
           <a className="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
             <span className="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
           </a>
@@ -51,7 +51,7 @@ export default function Home() {
                 <div className="content">
                   <h3>Precision Fitting for Every Environment.</h3>
                   <p>
-                    From high-output industrial bays to sleek architectural panels, RAM General Supply ensures your project is backed by 
+                    From high-output industrial bays to sleek architectural panels, RAM General Supply ensures your project is backed by
                     durable components and expert craftsmanship. We don't just sell lights; we engineer illumination.
                   </p>
                   <p>
@@ -103,39 +103,43 @@ export default function Home() {
 
             <div className="row gy-4">
               {[
-                { 
-                  title: "LED Retrofits", 
+                {
+                  title: "LED Retrofits",
                   desc: "Upgrade your existing fixtures to high-efficiency LED systems to reduce energy costs by up to 80%."
                 },
-                { 
-                  title: "Commercial Fitting", 
+                {
+                  title: "Commercial Fitting",
                   desc: "Professional installation for offices, retail spaces, and restaurants with architectural precision."
                 },
-                { 
-                  title: "Industrial High-Bay", 
+                {
+                  title: "Industrial High-Bay",
                   desc: "Rugged, powerful lighting solutions for warehouses, factories, and large-scale storage facilities."
                 },
-                { 
-                  title: "Smart Lighting Controls", 
+                {
+                  title: "Smart Lighting Controls",
                   desc: "Integrated automation systems allowing you to control brightness, timing, and motion sensing via mobile."
                 }
-              ].map((solution, i) => (
-                <div key={i} className="col-lg-6" data-aos="fade-up" data-aos-delay={(i + 1) * 100}>
-                  <div className="card-item shadow-sm">
-                    <div className="row">
-                      <div className="col-xl-5">
-                        <div className="card-bg" style={{ backgroundImage: `url(https://images.unsplash.com/photo-1542744173-8e08d2d88b42?auto=format&fit=crop&w=800&q=80)` }}></div>
-                      </div>
-                      <div className="col-xl-7 d-flex align-items-center">
-                        <div className="card-body">
-                          <h4 className="card-title">{solution.title}</h4>
-                          <p>{solution.desc}</p>
+              ].map((solution, i) => {
+                const heroImages = [
+                  "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=800&q=80",
+                  "https://images.unsplash.com/photo-1553095066-5014bc7b7f2d?auto=format&fit=crop&w=800&q=80",
+                  "https://images.unsplash.com/photo-1565814329452-e1dee7185ee8?auto=format&fit=crop&w=800&q=80",
+                  "https://images.unsplash.com/photo-1542744173-8e08d2d88b42?auto=format&fit=crop&w=800&q=80"
+                ];
+                return (
+                  <div key={i} className="col-lg-6" data-aos="fade-up" data-aos-delay={(i + 1) * 100}>
+                    <div className="card-item d-flex border" style={{ backgroundColor: '#fff', height: '100%', borderColor: '#ebebeb' }}>
+                      <div className="card-image" style={{ width: '45%', backgroundImage: `url(${heroImages[i % heroImages.length]})`, backgroundSize: 'cover', backgroundPosition: 'center', minHeight: '250px' }}></div>
+                      <div className="card-body d-flex align-items-center" style={{ width: '55%', padding: '30px' }}>
+                        <div>
+                          <h4 className="card-title" style={{ fontSize: '22px', fontWeight: '700', color: '#364d59', marginBottom: '15px' }}>{solution.title}</h4>
+                          <p style={{ color: '#4a5568', fontSize: '15px', lineHeight: '1.6', marginBottom: 0 }}>{solution.desc}</p>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </section>

@@ -2,10 +2,18 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer id="footer" className="footer">
-      <div className="footer-content position-relative" style={{ paddingTop: "60px" }}>
+    <footer id="footer" className="footer" style={{ 
+      backgroundImage: "url('https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=1920&q=80')", 
+      backgroundSize: 'cover', 
+      backgroundPosition: 'center center',
+      position: 'relative'
+    }}>
+      {/* Dark overlay for the image */}
+      <div style={{ position: 'absolute', inset: 0, backgroundColor: 'rgba(0,0,0,0.8)', zIndex: 0 }}></div>
+      
+      <div className="footer-content position-relative" style={{ paddingTop: "80px", zIndex: 1 }}>
         <div className="container">
-          <div className="row">
+          <div className="row gy-4">
             <div className="col-lg-4 col-md-6">
               <div className="footer-info">
                 <img src="/assets/img/logo.png" alt="RAM General Supply" className="img-fluid mb-4" style={{ maxHeight: "60px", filter: "brightness(0) invert(1)" }} />
@@ -45,7 +53,7 @@ export default function Footer() {
                 <li><a href="#">Maintenance</a></li>
               </ul>
             </div>
-            
+
             <div className="col-lg-3 col-md-3 footer-links">
               <h4>Support</h4>
               <ul>

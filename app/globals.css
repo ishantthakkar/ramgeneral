@@ -20,5 +20,346 @@ body {
   visibility: visible !important;
 }
 
-/* If you want the animations to work, you can remove the !important later, 
-   but this will confirm the content is actually there. */
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  padding: 0;
+  z-index: 1;
+  /* Keep it below header */
+}
+
+/* Make sure the header has a higher z-index than the hero */
+.header {
+  z-index: 997 !important;
+  padding: 20px 0 !important;
+  /* Proper padding for Navbar */
+}
+
+/* Ensure the hero contents do not cover everything */
+.hero .info {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  pointer-events: none;
+  /* Let events pass through to carousel */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero .info .container {
+  pointer-events: auto;
+  position: relative;
+  z-index: 3;
+  padding-top: 85px;
+  /* Safely clears navbar without pushing content off the screen */
+}
+
+/* Typography matching UpConstruction */
+.hero .info h2 {
+  color: #fff;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  font-size: 34px;
+  /* Scaled down further per request */
+  font-weight: 700;
+  position: relative;
+  line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+  .hero .info h2 {
+    font-size: 26px;
+    /* Scaled down for mobile */
+  }
+
+  .hero .info .container {
+    padding-top: 60px;
+  }
+}
+
+/* Navbar and Logo Adjustments */
+.header .logo img {
+  max-height: 45px !important;
+  width: auto;
+}
+
+/* Top-level Nav Links ONLY */
+.navbar>ul>li>a,
+.navbar>ul>li>a:focus {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0px !important;
+  padding: 0 !important;
+  text-decoration: none !important;
+}
+
+/* Reduce spacing between top-level navbar items */
+.navbar>ul>li {
+  padding: 10px 0 10px 20px !important;
+}
+
+/* Top-level hover and active */
+.navbar>ul>li>a:hover,
+.navbar .active {
+  text-decoration: none !important;
+}
+
+/* Dropdown & Megamenu Links Fixed Formatting */
+
+/* Standard Dropdowns */
+.navbar .dropdown ul a {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  padding: 10px 20px !important;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+  color: #364d59 !important;
+}
+
+/* Megamenu (Products Dropbox) */
+.navbar .megamenu-column ul li a {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  padding: 6px 0 !important;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+  color: #364d59 !important;
+}
+
+/* Dropdown Title headers */
+.navbar .megamenu-column h4 {
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  margin-bottom: 2px !important;
+  padding-bottom: 2px !important;
+}
+
+/* Hover effects for dropdown items */
+.navbar .dropdown ul a:hover,
+.navbar .megamenu-column ul li a:hover {
+  color: var(--color-primary) !important;
+}
+
+/* Dropbox / Megamenu Overall Container Padding Reduction */
+.navbar .megamenu ul {
+  padding: 5px 0 !important;
+}
+
+.navbar .megamenu ul .container {
+  padding: 5px 10px !important;
+}
+
+.navbar .megamenu ul .megamenu-column {
+  padding: 5px 20px !important;
+}
+
+/* The yellow line below the hero heading */
+.hero .info h2:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 60px;
+  height: 3px;
+  /* Slightly thinner */
+  background: var(--color-primary);
+  left: calc(50% - 30px);
+  bottom: 0;
+}
+
+.hero .info h2 span {
+  color: #fff;
+}
+
+.hero .info h3 {
+  color: #fff;
+  font-size: 16px;
+  /* Reduced further from 18px */
+  font-weight: 400;
+  margin-bottom: 12px !important;
+}
+
+.hero .info p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  /* Reduced further from 16px */
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+/* The View Collections Button */
+.hero .info .btn-get-started {
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: 14px;
+  /* Reduced further from 15px */
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 25px;
+  /* Thinner padding */
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 10px;
+  color: #fff;
+  border: 2px solid var(--color-primary);
+  background: transparent;
+  text-decoration: none !important;
+}
+
+.hero .info .btn-get-started:hover {
+  background: var(--color-primary);
+  color: #fff;
+  text-decoration: none !important;
+}
+
+/* Hero Carousel */
+.hero .carousel {
+  width: 100%;
+  min-height: 100vh;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.hero .carousel-inner,
+.hero .carousel-item {
+  width: 100%;
+  height: 100%;
+}
+
+.hero .carousel-item {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform 0.4s ease-in-out;
+}
+
+/* The dark shading over the images */
+.hero .carousel-item::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+/* Controls */
+.hero .carousel-control-prev,
+.hero .carousel-control-next {
+  width: 10%;
+  transition: 0.3s;
+  opacity: 0.5;
+  z-index: 5;
+  /* So they are clickable above everything else */
+  text-decoration: none !important;
+}
+
+.hero .carousel-control-prev-icon,
+.hero .carousel-control-next-icon {
+  background: none;
+  font-size: 48px;
+  line-height: 1;
+  width: auto;
+  height: auto;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.hero .carousel-control-prev:hover,
+.hero .carousel-control-next:hover {
+  opacity: 0.9;
+  text-decoration: none !important;
+}
+
+/* Breadcrumbs Links (Remove Underline) */
+.breadcrumbs a {
+  text-decoration: none !important;
+}
+.breadcrumbs a:hover {
+  text-decoration: none !important;
+}
+
+/*--------------------------------------------------------------
+# Footer Additions
+--------------------------------------------------------------*/
+.footer {
+  color: #fff;
+  font-size: 14px;
+}
+
+.footer .footer-content h4 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  padding-bottom: 12px;
+}
+
+.footer .footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer .footer-links ul li {
+  padding-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.footer .footer-links ul a {
+  color: rgba(255, 255, 255, 0.6);
+  transition: 0.3s;
+  display: inline-block;
+  line-height: 1;
+  text-decoration: none !important; /* Removes native link underline */
+}
+
+.footer .footer-links ul a:hover {
+  color: #fff;
+  text-decoration: none !important;
+}
+
+.footer .footer-info p {
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 0;
+  font-family: var(--font-primary);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer .social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  margin-right: 10px;
+  color: #fff;
+  font-size: 16px;
+  transition: 0.3s;
+  text-decoration: none !important;
+}
+
+.footer .social-links a:hover {
+  background: var(--color-primary);
+  color: #fff;
+  text-decoration: none !important;
+}
+
+.footer .copyright, .footer .credits {
+  color: #fff;
+  font-size: 14px;
+  padding-top: 10px;
+}
+.footer .credits {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+}

@@ -25,7 +25,7 @@ export default function About() {
                 <h4>Trusted Expertise</h4>
                 <h3>Our Story</h3>
                 <p>
-                  Trusted by companies for exceptional lighting services, RAM General Supply offers expert installations, 
+                  Trusted by companies for exceptional lighting services, RAM General Supply offers expert installations,
                   seamless rebate management, and superior energy-saving solutions. We ensure your space shines with the latest in LED technology.
                 </p>
                 <ul>
@@ -34,10 +34,10 @@ export default function About() {
                   <li><i className="bi bi-check-circle"></i> <span>100% Customer Satisfaction</span></li>
                 </ul>
                 <p>
-                  Our commitment to quality ensures that every project, from simple retrofits to large-scale industrial layouts, 
+                  Our commitment to quality ensures that every project, from simple retrofits to large-scale industrial layouts,
                   is executed with precision and engineering excellence.
                 </p>
-                
+
                 <div className="contact-box mt-4 p-4 shadow-sm bg-light border-start border-primary border-4">
                   <h5 className="mb-2">Call Us 24/7</h5>
                   <h3 className="text-primary font-weight-bold">+1 844-324-5726</h3>
@@ -80,7 +80,7 @@ export default function About() {
             <div className="col-lg-5 d-flex flex-column justify-content-center">
               <h3>Precision Engineering for Modern Solutions</h3>
               <p>We provide a wide range of analytical and design services to ensure your lighting investment delivers maximum returns.</p>
-              
+
               {[
                 { title: "Lighting Audit & Insights", icon: "bi-easel", text: "Detailed energy consumption analysis and rebate identification." },
                 { title: "Design & Plan", icon: "bi-patch-check", text: "Custom photometric layouts for optimal light distribution." },
@@ -108,7 +108,7 @@ export default function About() {
             <div className="col-lg-5 d-flex flex-column justify-content-center">
               <h3>Global Distribution & Support</h3>
               <p>With our robust supply chain, we deliver premium LED components to projects worldwide on-time and on-budget.</p>
-              
+
               <div className="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="100">
                 <i className="bi bi-truck flex-shrink-0"></i>
                 <div>
@@ -163,7 +163,7 @@ export default function About() {
             <h2>Client Feedback</h2>
             <p>Don't just take our word for it—see what our industrial and commercial partners are saying about RAM General Supply.</p>
           </div>
-          
+
           <div className="row gy-4">
             {[
               { name: "Saul Goodman", role: "Industrial Facility Manager", text: "The LED retrofit cut our energy costs by 65%. The team was professional and the installation was seamless." },
