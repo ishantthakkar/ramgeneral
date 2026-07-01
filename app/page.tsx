@@ -19,9 +19,9 @@ export default function Home() {
                   At Neutron Supply INC, we specialize in high-performance LED technology and expert installation.
                   Whether it's industrial, commercial, or residential, we bring precision and brilliance to every corner.
                 </p>
-                <Link data-aos="fade-up" data-aos-delay="200" href="/" className="btn-get-started">
+                {/* <Link data-aos="fade-up" data-aos-delay="200" href="/" className="btn-get-started">
                   View Collections
-                </Link>
+                </Link> */}
               </div>
             </div>
           </div>
