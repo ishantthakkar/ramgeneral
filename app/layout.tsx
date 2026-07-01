@@ -6,7 +6,6 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ClientInit from "./components/ClientInit";
 import Script from "next/script";
-import { createClient } from "@/prismicio";
 
 const openSans = Open_Sans({
   variable: "--font-open-sans",
@@ -27,32 +26,15 @@ const workSans = Work_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "RAM General Supply - Leading LED Solutions",
+  title: "Neutron Supply INC Supply - Leading LED Solutions",
   description: "Professional LED Fitting & Lighting Fitting Expertise",
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const client = createClient();
-  let categories: any[] = [];
-  let subCategories: any[] = [];
-
-  try {
-    // Force a fresh fetch by passing fetch options
-    categories = await client.getAllByType("product_category");
-    console.log(categories);
-    subCategories = await client.getAllByType("product_sub_category");
-    console.log(subCategories);
-
-    // Server-side logging (Check your terminal where npm run dev is running)
-    console.log(`Prismic Debug: Fetched ${categories.length} categories and ${subCategories.length} sub-categories.`);
-  } catch (error) {
-    console.error("Prismic Fetch Error:", error);
-  }
-
   return (
     <html
       lang="en"
@@ -70,7 +52,7 @@ export default async function RootLayout({
       </head>
       <body suppressHydrationWarning>
         <ClientInit />
-        <Header categories={categories} subCategories={subCategories} />
+        <Header />
         {children}
         <Footer />
 

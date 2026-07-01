@@ -14,12 +14,12 @@ export async function generateMetadata({ params }: { params: Promise<{ uid: stri
       : (service.data.title?.[0]?.text || "Service Details");
 
     return {
-      title: `${title} - RAM General Supply`,
-      description: "Service details for RAM General Supply",
+      title: `${title} - Neutron Supply INC Supply`,
+      description: "Service details for Neutron Supply INC Supply",
     };
   } catch (e) {
     return {
-      title: "Service Not Found - RAM General Supply",
+      title: "Service Not Found - Neutron Supply INC Supply",
     };
   }
 }

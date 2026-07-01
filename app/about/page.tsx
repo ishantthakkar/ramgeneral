@@ -25,7 +25,7 @@ export default function About() {
                 <h4>Trusted Expertise</h4>
                 <h3>Our Story</h3>
                 <p>
-                  Trusted by companies for exceptional lighting services, RAM General Supply offers expert installations,
+                  Trusted by companies for exceptional lighting services, Neutron Supply INC Supply offers expert installations,
                   seamless rebate management, and superior energy-saving solutions. We ensure your space shines with the latest in LED technology.
                 </p>
                 <ul>
@@ -161,13 +161,13 @@ export default function About() {
         <div className="container" data-aos="fade-up">
           <div className="section-header">
             <h2>Client Feedback</h2>
-            <p>Don't just take our word for it—see what our industrial and commercial partners are saying about RAM General Supply.</p>
+            <p>Don't just take our word for it—see what our industrial and commercial partners are saying about Neutron Supply INC</p>
           </div>
 
           <div className="row gy-4">
             {[
               { name: "Saul Goodman", role: "Industrial Facility Manager", text: "The LED retrofit cut our energy costs by 65%. The team was professional and the installation was seamless." },
-              { name: "Sara Wilsson", role: "Commercial Developer", text: "RAM General provided the best ROI analysis we've seen. Their design plan was perfect for our new office complex." }
+              { name: "Sara Wilsson", role: "Commercial Developer", text: "Neutron Supply INC provided the best ROI analysis we've seen. Their design plan was perfect for our new office complex." }
             ].map((t, i) => (
               <div key={i} className="col-lg-6">
                 <div className="testimonial-item p-4 bg-white shadow-sm rounded">

@@ -59,7 +59,7 @@ export default function EnquiryModal({ productName, variants = [], isOpen, onClo
             {isSuccess ? (
               <div className="alert alert-success text-center">
                 <i className="bi bi-check-circle-fill d-block mb-2" style={{ fontSize: "2rem" }}></i>
-                Thank you! Your enquiry has been sent to RAM General Supply admin.
+                Thank you! Your enquiry has been sent to Neutron Supply INC Supply admin.
               </div>
             ) : (
               <form 

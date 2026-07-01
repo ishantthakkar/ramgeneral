@@ -23,7 +23,14 @@ export default function Contact() {
               <div className="info-item d-flex flex-column justify-content-center align-items-center">
                 <i className="bi bi-map"></i>
                 <h3>Our Address</h3>
-                <p>A108 Adam Street, New York, NY 535022</p>
+                <p
+                  className="mb-0"
+                  style={{ textAlign: "left", display: "inline-block", lineHeight: 1.8 }}
+                >
+                  255 East 17th Street<br />
+                  Paterson, New Jersey<br />
+                  USA 07524
+                </p>
               </div>
             </div>
 
@@ -47,10 +54,11 @@ export default function Contact() {
           <div className="row gy-4 mt-1">
             <div className="col-lg-6">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
-                style={{ border: 0, width: "100%", height: "384px" }}
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3014.3629430641154!2d-74.15546012444578!3d40.92971212425966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2fc5c7db217ef%3A0x40f503ea1b8b713!2s255%20E%2017th%20St%2C%20Paterson%2C%20NJ%2007524%2C%20USA!5e0!3m2!1sen!2sin!4v1782895893819!5m2!1sen!2sin"
+                style={{ border: 0, width: "100%", height: "450px" }}
                 allowFullScreen
                 loading="lazy"
+                referrerPolicy="strict-origin-when-cross-origin"
               ></iframe>
             </div>
 

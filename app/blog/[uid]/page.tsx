@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   try {
     const page = await client.getByUID('blog', uid);
     return {
-      title: `${typeof page.data.title === 'string' ? page.data.title : (page.data.title?.[0]?.text || 'Blog Post')} - RAM General Supply`,
+      title: `${typeof page.data.title === 'string' ? page.data.title : (page.data.title?.[0]?.text || 'Blog Post')} - Neutron Supply INC Supply`,
     };
   } catch (e) {
     return {

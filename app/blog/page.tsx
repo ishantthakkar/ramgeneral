@@ -4,8 +4,8 @@ import { createClient } from '@/prismicio';
 import { PrismicText } from '@prismicio/react';
 
 export const metadata: Metadata = {
-  title: 'Blog - RAM General Supply',
-  description: 'Read the latest updates and blog posts from RAM General Supply.',
+  title: 'Blog - Neutron Supply INC Supply',
+  description: 'Read the latest updates and blog posts from Neutron Supply INC',
 };
 
 export default async function Blog() {
